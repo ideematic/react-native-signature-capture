@@ -29,9 +29,6 @@ import com.rssignaturecapture.utils.ControlTimedPoints;
 import com.rssignaturecapture.utils.Bezier;
 
 public class RSSignatureCaptureView extends View {
-	private static final float STROKE_WIDTH = 2f;
-	private static final float HALF_STROKE_WIDTH = STROKE_WIDTH / 2;
-
 	private boolean mIsEmpty;
 	private OnSignedListener mOnSignedListener;
 	private int mMinWidth;
@@ -68,7 +65,7 @@ public class RSSignatureCaptureView extends View {
 		mPaint.setStrokeCap(Paint.Cap.ROUND);
 		mPaint.setStrokeJoin(Paint.Join.ROUND);
 
-		mMinWidth = convertDpToPx(2);
+		mMinWidth = convertDpToPx(5);
 		mMaxWidth = convertDpToPx(8);
 		mVelocityFilterWeight = 0.4f;
 		mPaint.setColor(Color.BLACK);
@@ -83,6 +80,14 @@ public class RSSignatureCaptureView extends View {
 
 		// width and height should cover the screen
 		this.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+	}
+	/**
+	* set Stroke Line Size
+	*
+	* @return
+	*/
+	public void setStrokeLineSize(Integer strokeLineSize) {
+		mMinWidth = convertDpToPx((float)strokeLineSize);
 	}
 
 	/**
