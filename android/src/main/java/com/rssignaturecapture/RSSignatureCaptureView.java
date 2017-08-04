@@ -87,7 +87,7 @@ public class RSSignatureCaptureView extends View {
 	* @return
 	*/
 	public void setStrokeLineSize(Integer strokeLineSize) {
-		Log.d("RSSignatureCaptureView::setStrokeLineSize", "" + strokeLineSize)
+		Log.d("RSSignatureCaptureView::setStrokeLineSize", "" + strokeLineSize);
 		mMinWidth = convertDpToPx(strokeLineSize);
 		mMaxWidth = convertDpToPx(strokeLineSize + 3);
 	}
