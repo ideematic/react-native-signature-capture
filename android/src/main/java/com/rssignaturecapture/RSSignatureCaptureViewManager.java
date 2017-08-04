@@ -39,7 +39,7 @@ public class RSSignatureCaptureViewManager extends ViewGroupManager<RSSignatureC
 
 	@ReactProp(name = PROPS_STROKE_LINE_SIZE)
 	public void setPropsStrokeLineSize(RSSignatureCaptureMainView view, @Nullable Integer strokeLineSize) {
-		Log.d("setPropsStrokeLineSize" + "" + strokeLineSize);
+		Log.d("setPropsStrokeLineSize", "" + strokeLineSize);
 		if (view != null) {
 			view.setStrokeLineSize(strokeLineSize);
 		}
