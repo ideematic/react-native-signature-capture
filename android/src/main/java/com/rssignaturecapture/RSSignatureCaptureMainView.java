@@ -40,7 +40,7 @@ public class RSSignatureCaptureMainView extends LinearLayout implements OnClickL
   Boolean showNativeButtons = true;
   Boolean showTitleLabel = true;
   int maxSize = 500;
-  int strokeLine = 5
+  int strokeLine = 5;
 
   public RSSignatureCaptureMainView(Context context, Activity activity) {
     super(context);
@@ -64,9 +64,9 @@ public class RSSignatureCaptureMainView extends LinearLayout implements OnClickL
   }
 
   public void setStrokeLineSize(Integer strokeLineSize) {
-    this.strokeLine = strokeLine
+    this.strokeLine = strokeLine;
     if (this.signatureView != null) {
-      this.signatureView.setStrokeLineSize(this.strokeLine)
+      this.signatureView.setStrokeLineSize(this.strokeLine);
     }
   }
 
